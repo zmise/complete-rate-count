@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>楼盘字段完备</title>
+  <link href="http://192.168.0.42/resource/cloud/css/global/base.css?v=20141111" rel="stylesheet" type="text/css" />
+  <link href="http://192.168.0.42/resource/cloud/css/global/button.css?v=20141111" rel="stylesheet" type="text/css" />
+  <link href="http://192.168.0.42/resource/cloud/css/global/widgets.css?v=20141111" rel="stylesheet" type="text/css" />
+  <link href="http://192.168.0.42/resource/cloud/css/module/table_inquiry.css?v=20141111" rel="stylesheet" type="text/css"
+  />
+  <link rel="stylesheet" href="../../css/base.css">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/toast.css" rel="stylesheet">
+  <link href="../../css/toast.css" rel="stylesheet">
+</head>
+
+<body>
+  <article class="article-body flexbox flex-dic-cl">
+    <div class="searchBox">
+      <form id="searchForm" method="post">
+        <ul class="clearfix">
+          <li>
+            <select id="propertyType" name="propertyType">
+              <option value="">物业类型</option>
+              <option value="APARTMENT">住宅</option>
+              <option value="VILLA">别墅</option>
+              <option value="BUILDING">写字楼</option>
+              <option value="LIVINGBUILDING">商住</option>
+              <option value="SHOP">商铺</option>
+              <option value="FACTORY">厂房</option>
+              <option value="GROUND">地皮</option>
+              <option value="FARMERS">农民房</option>
+              <option value="ACARBARN">车库</option>
+              <option value="LODGINGHOUSE">公寓</option>
+              <option value="OTHER">其他</option>
+            </select>
+          </li>
+          <li>
+            <a id="searchBtn" href="javascript:void(0)" class="mini-button importantBtn">
+              <span class="mini-button-text">查询</span>
+            </a>
+          </li>
+          <li class="flexbox">
+            <p class="flexbox flex-al-fe h30">截止统计日期：</p>
+            <span class="flexbox flex-al-fe h30" id="statDate"></span>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div class="flexbox flex-item  mb-25">
+      <div class="flex-item bd mr-20  flexbox flex-dic-cl">
+        <div class="h35-b">完备率排名</div>
+        <div class="flex-item of-a">
+          <div class="table-list" id="tableList">
+          </div>
+        </div>
+      </div>
+      <div class="flex-item flexbox flex-dic-cl">
+        <div class="bd mb-20 h135 flexbox flex-dic-cl">
+          <div class="h35-b">完备概况</div>
+          <div class="flexbox flex-item">
+            <div class="flexbox flex-item flex-dic-cl flex-al-tc bd-r ">
+              <p class="pt-15" style="font-size: 14px">总社区量</p>
+              <strong class="pt-10" style="font-size: 28px;font-weight: 900" id="gardenCount"></strong>
+            </div>
+            <div class="flexbox flex-item flex-dic-cl flex-al-tc bd-r ">
+              <p class="pt-15" style="font-size: 14px">完备社区量</p>
+              <strong class="pt-10" style="font-size: 28px;font-weight: 900" id="completedGardenCount"></strong>
+            </div>
+            <div class="flexbox flex-item flex-dic-cl flex-al-tc">
+              <p class="pt-15" style="font-size: 14px">完备率</p>
+              <strong class="pt-10 current-color" style="font-size: 28px;font-weight: 900 " id="completeRatio"></strong>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item bd flexbox flex-dic-cl">
+          <div class="h35-b">完备量</div>
+          <div class="flex-item of-a table-box">
+            <div class="table-responsive" id="list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script type="text/javascript" src="../../js/jQuery.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.js"></script>
+  <script type="text/javascript" src="../../js/toast.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+
+
+</body>
+
+</html>
